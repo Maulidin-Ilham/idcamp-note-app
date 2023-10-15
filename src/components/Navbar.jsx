@@ -1,12 +1,12 @@
 const Navbar = () => {
   return (
     <>
-      <div className="w-full bg-black flex justify-between p-4">
+      <div className="w-2/3  flex justify-between p-4">
         <div>
-          <h1>Navbar</h1>
+          <h1 className="text-xl font-semibold cursor-pointer ">Logo</h1>
         </div>
         <div>
-          <h1>Bookmarks</h1>
+          <h1 className="text-xl font-semibold cursor-pointer">Archieve</h1>
         </div>
       </div>
     </>
