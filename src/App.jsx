@@ -4,11 +4,11 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <div className="flex justify-center items-center text-white bg-gray-500">
-        <div className="w-2/3 justify-center items-center">
+      <div className="text-white bg-gray-500 min-h-screen">
+        <div className="w-full flex flex-col  items-center">
           <Navbar />
           <Form />
-          <h1 className="text-black">Tessdddwdwdwdwdwdw</h1>
+          {/* <h1 className="text-black">Tessdddwdwdwdwdwdw</h1> */}
         </div>
       </div>
     </>

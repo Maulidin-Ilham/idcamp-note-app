@@ -1,17 +1,23 @@
 const Form = () => {
   return (
-    <div className="mt-8">
-      <form action="" className="flex space-x-6 justify-center">
+    <div className="mt-8 w-2/3  flex justify-center items-center text-black">
+      <form action="" className="flex flex-col space-y-6">
         <input
           type="text"
-          placeholder="Add notes"
-          className="w-2/3 px-4 py-2   text-black bg-gray-100 border-black border-[3px]"
+          placeholder="add title"
+          className="w-[450px] px-4 py-2 border-2 border-black"
         />
+        <textarea
+          name="body"
+          id=""
+          className="w-[450px] h-[180px] px-4 py-2 resize-none border-2 border-black"
+          placeholder="write your note here..."
+        ></textarea>
         <button
           type="submit"
-          className="text-black bg-white border-black border-[3px] px-4 hover:bg-gray-200"
+          className="bg-white py-2 px-4 shadow-[7px_7px_0_0_rgba(0,0,0,0.98)] hover:bg-gray-300 border-2 border-black"
         >
-          Add
+          Add note
         </button>
       </form>
     </div>

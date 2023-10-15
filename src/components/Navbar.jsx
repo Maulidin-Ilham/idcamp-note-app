@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <>
-      <div className="bg-black flex justify-between p-4">
+      <div className="w-full bg-black flex justify-between p-4">
         <div>
           <h1>Navbar</h1>
         </div>
