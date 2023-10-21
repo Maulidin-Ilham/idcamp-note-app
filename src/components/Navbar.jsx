@@ -1,12 +1,13 @@
 const Navbar = () => {
   return (
     <>
-      <div className="w-2/3  flex justify-between p-4 ">
+      <div className="w-2/3  flex justify-between p-4">
         <div className="flex flex-row space-x-10 items-end justify-center ">
-          <h1 className="text-xl font-semibold cursor-pointer ">Logo</h1>
-          <h1 className="text-xl font-semibold cursor-pointer">Archieve</h1>
+          <a href="#" className="hover:text-gray-300">
+            <h1 className="text-xl font-semibold cursor-pointer">Archieve</h1>
+          </a>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-end">
           <input
             type="text"
             placeholder="Search here..."
