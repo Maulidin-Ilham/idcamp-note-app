@@ -32,7 +32,9 @@ const Form = ({ getNote }) => {
       createdAt,
     };
 
-    getNote(newNote);
+    if ((title !== "") & (body !== "")) {
+      getNote(newNote);
+    }
 
     setTitle("");
     setBody("");
