@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Result = ({ note, handleDelete }) => {
+const Result = ({ note, handleDelete, handleArchive }) => {
   // eslint-disable-next-line no-unused-vars
 
   return (
@@ -21,7 +21,7 @@ const Result = ({ note, handleDelete }) => {
                   Delete
                 </h1>
               </button>
-              <button className="w-full">
+              <button className="w-full" onClick={() => handleArchive(item.id)}>
                 <h1 className="text-lg text-green-500 hover:text-green-800 font-bold">
                   Archive
                 </h1>
