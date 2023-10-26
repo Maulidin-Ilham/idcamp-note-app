@@ -5,13 +5,21 @@ import { useState } from "react";
 const Form = ({ getNote }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [archived, setArchiver] = useState(false);
+  let today = new Date();
+
+  const [id, setId] = useState(today.getMilliseconds());
+  const [createdAt, setCreatedAt] = useState(today.toLocaleDateString("id-ID"));
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setId(today.getMilliseconds());
     const newNote = {
+      id,
       title,
       body,
+      archived,
+      createdAt,
     };
 
     getNote(newNote);
@@ -21,7 +29,7 @@ const Form = ({ getNote }) => {
   };
 
   return (
-    <div className="mt-8 w-2/3  flex justify-center items-center text-black">
+    <div className="mt-10 w-2/3  flex justify-center items-center text-black">
       <form
         action=""
         className="flex flex-col space-y-6 "

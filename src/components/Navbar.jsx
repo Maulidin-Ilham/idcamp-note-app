@@ -4,6 +4,9 @@ const Navbar = () => {
       <div className="w-2/3  flex justify-between p-4">
         <div className="flex flex-row space-x-10 items-end justify-center ">
           <a href="#" className="hover:text-gray-300">
+            <h1 className="text-xl font-semibold cursor-pointer">Home</h1>
+          </a>
+          <a href="#" className="hover:text-gray-300">
             <h1 className="text-xl font-semibold cursor-pointer">Archieve</h1>
           </a>
         </div>
