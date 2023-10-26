@@ -58,7 +58,7 @@ const Form = ({ getNote }) => {
         <textarea
           name="body"
           id=""
-          className="w-[450px] h-[180px] px-4 py-2 resize-none border-2 border-black"
+          className="w-[450px] h-[300px] px-4 py-2 resize-none border-2 border-black"
           placeholder="write your note here..."
           value={body}
           onChange={(e) => setBody(e.target.value)}

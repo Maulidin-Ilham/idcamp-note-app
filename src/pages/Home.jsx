@@ -3,12 +3,13 @@ import { useState } from "react";
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
 import Result from "../components/Result";
+import NoNote from "../components/NoNote";
 
 const Home = () => {
   const [note, setNote] = useState([]);
 
   const getNote = (newNote) => {
-    setNote([...note, newNote]);
+    setNote([newNote, ...note]);
   };
 
   const handleDelete = (id) => {
@@ -23,7 +24,9 @@ const Home = () => {
         <Form getNote={getNote} />
         {note.length > 0 ? (
           <Result note={note} handleDelete={handleDelete} />
-        ) : null}
+        ) : (
+          <NoNote />
+        )}
       </div>
     </div>
   );
