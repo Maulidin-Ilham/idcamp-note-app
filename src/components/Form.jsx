@@ -8,8 +8,18 @@ const Form = ({ getNote }) => {
   const [archived, setArchiver] = useState(false);
   let today = new Date();
 
+  const dateOptions = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    locale: "id-ID",
+  };
+
   const [id, setId] = useState(today.getMilliseconds());
-  const [createdAt, setCreatedAt] = useState(today.toLocaleDateString("id-ID"));
+  const [createdAt, setCreatedAt] = useState(
+    today.toLocaleDateString("id-ID", dateOptions)
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();

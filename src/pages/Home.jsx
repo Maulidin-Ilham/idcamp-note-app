@@ -11,12 +11,19 @@ const Home = () => {
     setNote([...note, newNote]);
   };
 
+  const handleDelete = (id) => {
+    const updatedNote = note.filter((item) => item.id !== id);
+    setNote(updatedNote);
+  };
+
   return (
     <div className="text-white bg-gray-500 min-h-screen">
       <div className="w-full flex flex-col  items-center">
         <Navbar />
         <Form getNote={getNote} />
-        {note.length > 0 ? <Result note={note} /> : null}
+        {note.length > 0 ? (
+          <Result note={note} handleDelete={handleDelete} />
+        ) : null}
       </div>
     </div>
   );

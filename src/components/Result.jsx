@@ -1,9 +1,6 @@
 /* eslint-disable react/prop-types */
-const Result = ({ note }) => {
+const Result = ({ note, handleDelete }) => {
   // eslint-disable-next-line no-unused-vars
-  const handleDelete = (item) => {
-    console.log(`id dihapus ${item}`);
-  };
 
   return (
     <>
@@ -14,7 +11,7 @@ const Result = ({ note }) => {
             key={item.id}
           >
             <div>
-              <h1 className=" text-xl font-bold">{item.title}</h1>
+              <h1 className=" text-xl font-bold capitalize">{item.title}</h1>
               <h1 className=" mt-2 text-sm text-gray-700">{item.createdAt}</h1>
               <h1 className=" mt-4 text-lg">{item.body}</h1>
             </div>
