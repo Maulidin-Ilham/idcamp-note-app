@@ -5,10 +5,8 @@ import Form from "../components/Form";
 import Navbar from "../components/Navbar";
 import Result from "../components/Result";
 import NoNote from "../components/NoNote";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
   const [note, setNote] = useState([]);
   const [archivedNote, setArchivedNote] = useState([]);
 
@@ -23,19 +21,7 @@ const Home = () => {
 
   const handleArchive = (id) => {
     const noteToArchive = note.find((item) => item.id === id);
-    console.log(noteToArchive);
-    setArchivedNote([noteToArchive, ...archivedNote]);
-    console.log(archivedNote);
-    // if (noteToArchive) {
-    //   // Remove the note from the active notes
-    //   const updatedNote = note.filter((item) => item.id !== id);
-    //   setNote(updatedNote);
-
-    //   // Add the note to the archived notes
-    //   setArchivedNote([noteToArchive, ...archivedNote]);
-
-    //   console.log(archivedNote);
-    // }
+    console.log(`id ${id} dimasukkan ke archive`);
   };
 
   return (

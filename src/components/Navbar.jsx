@@ -6,9 +6,6 @@ const Navbar = () => {
           <a href="/" className="hover:text-gray-300">
             <h1 className="text-xl font-semibold cursor-pointer">Home</h1>
           </a>
-          <a href="/archieve" className="hover:text-gray-300">
-            <h1 className="text-xl font-semibold cursor-pointer">Archieve</h1>
-          </a>
         </div>
         <div className="flex justify-center items-end">
           <input
