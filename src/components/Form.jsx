@@ -9,7 +9,7 @@ const Form = ({ getNote }) => {
   const [archived, setArchiver] = useState(false);
   let today = new Date();
   let max = 50;
-  const notify = () => toast.success("Note berhasil ditambahkan");
+  const notify = () => toast.success("Note added successfully");
 
   const dateOptions = {
     weekday: "long",

@@ -1,4 +1,14 @@
-const Navbar = () => {
+/* eslint-disable no-unused-vars */
+
+import { useState } from "react";
+
+/* eslint-disable react/prop-types */
+const Navbar = ({ getSearch }) => {
+  const [query, setQuery] = useState("");
+  const handleInput = (query) => {
+    setQuery(query);
+    getSearch(query);
+  };
   return (
     <>
       <div className="w-2/3  flex justify-between p-4">
@@ -12,6 +22,8 @@ const Navbar = () => {
             type="text"
             placeholder="Search here..."
             className="px-3 py-2 w-[260px] border-2 border-black text-black"
+            value={query}
+            onChange={(e) => handleInput(e.target.value)}
           />
         </div>
       </div>
