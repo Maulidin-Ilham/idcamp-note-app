@@ -7,11 +7,13 @@ import Result from "../components/Result";
 import NoNote from "../components/NoNote";
 import ArchivedNote from "../components/ArchivedNote";
 import toast from "react-hot-toast";
+import { getInitialData, showFormattedDate } from "../utils";
 
 const Home = () => {
-  const [note, setNote] = useState([]);
+  const [note, setNote] = useState(getInitialData());
   const [archivedNote, setArchivedNote] = useState([]);
   const [search, setSearch] = useState("");
+
   const delete_notify = () => toast.success("Note deleted successfully");
   const getNote = (newNote) => {
     setNote([newNote, ...note]);
@@ -28,11 +30,9 @@ const Home = () => {
   const handleArchive = (id) => {
     const noteToArchive = note.find((item) => item.id === id);
 
-    // Remove the note from active notes
     const updatedNote = note.filter((item) => item.id !== id);
     setNote(updatedNote);
 
-    // Add the note to archived notes
     setArchivedNote([noteToArchive, ...archivedNote]);
   };
 

@@ -1,16 +1,20 @@
 /* eslint-disable react/prop-types */
 
+import { showFormattedDate } from "../utils";
+
 const ArchivedList = ({ archive, handleUnarchive }) => {
   return (
     <>
       {archive.map((item) => (
         <div
-          className="h-[300px] w-[280px] bg-white mt-10 g-white py-2 px-4 shadow-[5px_7px_0_0_rgba(0,0,0,0.98)] flex flex-col justify-between "
+          className="h-[410px] w-[310px] bg-white mt-10 g-white py-2 px-4 shadow-[5px_7px_0_0_rgba(0,0,0,0.98)] flex flex-col justify-between "
           key={item.id}
         >
           <div>
             <h1 className=" text-xl font-bold capitalize">{item.title}</h1>
-            <h1 className=" mt-2 text-sm text-gray-700">{item.createdAt}</h1>
+            <h1 className=" mt-2 text-sm text-gray-700">
+              {showFormattedDate(item.createdAt)}
+            </h1>
             <h1 className=" mt-4 text-lg">{item.body}</h1>
           </div>
           <div className="flex flex-row justify-between  space-x-4">

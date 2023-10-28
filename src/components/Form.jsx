@@ -11,18 +11,8 @@ const Form = ({ getNote }) => {
   let max = 50;
   const notify = () => toast.success("Note added successfully");
 
-  const dateOptions = {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    locale: "id-ID",
-  };
-
   const [id, setId] = useState(today.getMilliseconds());
-  const [createdAt, setCreatedAt] = useState(
-    today.toLocaleDateString("id-ID", dateOptions)
-  );
+  const [createdAt, setCreatedAt] = useState(Date.now());
 
   const handleSubmit = (e) => {
     e.preventDefault();
