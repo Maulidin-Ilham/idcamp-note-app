@@ -44,6 +44,7 @@ const Home = () => {
     <div className="text-white bg-gray-500 min-h-screen">
       <div className="w-full flex flex-col  items-center">
         <Navbar />
+
         <Form getNote={getNote} />
         <h1 className="text-white text-center text-xl mt-12 font-semibold">
           Catatan Aktif

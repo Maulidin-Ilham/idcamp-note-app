@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const Form = ({ getNote }) => {
   const [title, setTitle] = useState("");
@@ -8,6 +9,7 @@ const Form = ({ getNote }) => {
   const [archived, setArchiver] = useState(false);
   let today = new Date();
   let max = 50;
+  const notify = () => toast.success("Note berhasil ditambahkan");
 
   const dateOptions = {
     weekday: "long",
@@ -39,6 +41,7 @@ const Form = ({ getNote }) => {
         getNote(newNote);
         setTitle("");
         setBody("");
+        notify();
       }
     }
   };
@@ -79,6 +82,7 @@ const Form = ({ getNote }) => {
             </button>
           </div>
         </form>
+        <Toaster />
       </div>
     </>
   );
